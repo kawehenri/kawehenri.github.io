@@ -372,8 +372,11 @@ body {
     font-feature-settings: "tnum";
     word-spacing: 0;
     white-space: nowrap !important;
-    display: inline-block;
+    display: inline-block !important;
     min-width: 80px;
+    word-break: keep-all !important;
+    hyphens: none !important;
+    overflow-wrap: normal !important;
 }
 
 .stat-label {
