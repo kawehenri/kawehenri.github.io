@@ -1571,6 +1571,7 @@
 @media (max-width: 768px) {
     .teams-section,
     .learnings-section,
+    .participacoes-section,
     .share-section {
         display: block !important;
         visibility: visible !important;
@@ -1703,6 +1704,7 @@
 @media (max-width: 1024px) and (min-width: 769px) {
     .teams-section,
     .learnings-section,
+    .participacoes-section,
     .share-section {
         padding: 80px 0 !important;
     }
@@ -1744,6 +1746,7 @@
 @media (max-width: 480px) {
     .teams-section,
     .learnings-section,
+    .participacoes-section,
     .share-section {
         padding: 40px 0 !important;
     }

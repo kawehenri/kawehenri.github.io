@@ -340,8 +340,10 @@ body {
 
 .stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .stat {
@@ -356,11 +358,17 @@ body {
     font-weight: 700;
     color: #2c5aa0;
     margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.stat-slash {
+    display: inline-block;
 }
 
 .stat-label {
     color: #666;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .about-image {
@@ -692,6 +700,8 @@ body {
     .stats {
         grid-template-columns: 1fr;
         gap: 20px;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     .footer-content {
@@ -1700,6 +1710,79 @@ body {
     font-size: 1rem;
 }
 
+/* Participações Section */
+.participacoes-section {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.participacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.participacao-item {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.participacao-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #4ade80, #2c5aa0);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.participacao-item:hover::before {
+    transform: scaleX(1);
+}
+
+.participacao-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.participacao-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #4ade80, #2c5aa0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    box-shadow: 0 10px 25px rgba(44, 90, 160, 0.3);
+}
+
+.participacao-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.participacao-description {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1rem;
+    text-align: left;
+}
+
 /* Challenges Section Styles */
 .challenges-section {
     padding: 100px 0;
@@ -1789,6 +1872,35 @@ body {
         padding: 0 15px !important;
     }
     
+    .participacoes-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        margin-top: 40px !important;
+        padding: 0 15px !important;
+    }
+    
+    .participacao-item {
+        padding: 25px 20px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .participacao-icon {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.5rem !important;
+        margin: 0 auto 15px !important;
+    }
+    
+    .participacao-title {
+        font-size: 1.3rem !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .participacao-description {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+    }
+    
     .learning-item {
         padding: 25px 20px !important;
         margin-bottom: 15px !important;
@@ -1858,6 +1970,13 @@ body {
 
 @media (max-width: 1024px) and (min-width: 769px) {
     .learnings-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 25px !important;
+        margin-top: 50px !important;
+        padding: 0 20px !important;
+    }
+    
+    .participacoes-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 25px !important;
         margin-top: 50px !important;
