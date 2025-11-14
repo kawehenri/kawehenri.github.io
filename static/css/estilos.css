@@ -351,6 +351,7 @@ body {
     padding: 20px;
     background: #f8fafc;
     border-radius: 15px;
+    min-width: 150px;
 }
 
 .stat-number {
@@ -358,11 +359,21 @@ body {
     font-weight: 700;
     color: #2c5aa0;
     margin-bottom: 5px;
-    white-space: nowrap;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    display: inline-block;
+    line-height: 1;
+    letter-spacing: 0;
 }
 
-.stat-slash {
+.stat-monitoring {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    word-spacing: 0;
+    white-space: nowrap !important;
     display: inline-block;
+    min-width: 80px;
 }
 
 .stat-label {
